@@ -1,3 +1,9 @@
+import; {
+  AdjustmentsVerticalIcon,
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+  UserIcon,
+} from "react-native-heroicons/outline";
 import {
   Image,
   SafeAreaView,
@@ -8,16 +14,11 @@ import {
   View,
 } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import {
-  UserIcon,
-  ChevronDownIcon,
-  MagnifyingGlassIcon,
-  AdjustmentsVerticalIcon,
-} from "react-native-heroicons/outline";
+
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import sanityClient from "../sanity";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -37,10 +38,6 @@ const HomeScreen = () => {
       .then((data) => {
         setFeaturedCategories(data);
       });
-  }, []);
-
-  useLayoutEffect(() => {
-    navigation.setOptions({ headerShown: false });
   }, []);
 
   return (
