@@ -1,4 +1,4 @@
-import; {
+import {
   AdjustmentsVerticalIcon,
   ChevronDownIcon,
   MagnifyingGlassIcon,
